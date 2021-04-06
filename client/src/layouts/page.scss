@@ -1,0 +1,43 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-black;
+  font-family: $roboto;
+}
+
+.page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+    color: $color-white;
+  }
+  p {
+    margin: 10px 0 0 0;
+    color: $color-white;
+  }
+
+  &__projects {
+    margin: 40px 0 0 0;
+
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__item {
+        margin: 10px;
+
+        a {
+          img {
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
