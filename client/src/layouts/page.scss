@@ -1,41 +1,248 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: $color-black;
-  font-family: $roboto;
+  background-color: $color-strong;
+  font-family: $roboto-mono;
+}
+
+.content {
+  width: 1024px;
 }
 
 .page {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 49.5%;
+  top: 49.5%;
+  transform: translate(-49.5%, -49.5%);
+  display: flex;
+  justify-content: center;
   text-align: center;
 
-  h1 {
-    font-size: 2em;
-    color: $color-white;
-  }
-  p {
-    margin: 10px 0 0 0;
-    color: $color-white;
+  &__title {
+    display: flex;
+    justify-content: space-around;
   }
 
-  &__projects {
-    margin: 40px 0 0 0;
+  h2 {
+    margin: 5px;
+    color: $color-white;
+    font-weight: 500;
+    text-shadow: 1px 1px 5px rgba(black, 0.5);
+  }
 
-    &__items {
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__left {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      width: 49.5%;
 
-      &__item {
-        margin: 10px;
+      &__input {
+        @include input-medium;
+        justify-content: space-between;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+
+      &__input {
+        @include input-medium;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__attributes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 49.5%;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+
+        &__input {
+          @include input-small;
+          justify-content: space-between;
+
+          a {
+            img {
+              width: 24px;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+
+        &__input {
+          @include input-small;
+          justify-content: space-between;
+
+          a {
+            img {
+              width: 24px;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__about {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+      text-align: left;
+
+      &__input {
+        @include input-great;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+
+      &__input {
+        @include input-medium;
+
+        &__html5 {
+          color: #dc4b25;
+        }
+        &__css {
+          color: #016db9;
+        }
+        &__sass {
+          color: #c66393;
+        }
+        &__js {
+          color: #efd81c;
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+
+      &__input {
+        @include input-medium;
+
+        &__react {
+          color: #5fd2f2;
+        }
+        &__git {
+          color: #e84d31;
+        }
+        &__salesforce {
+          color: #019dda;
+        }
+      }
+    }
+  }
+
+  &__two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__exp {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+
+      &__input {
+        @include input-medium;
 
         a {
-          img {
-            width: 50px;
+          text-decoration: none;
+          color: $color-white;
+
+          &:hover {
+            color: $color-light;
           }
+        }
+      }
+    }
+
+    &__projects {
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+
+      &__input {
+        @include input-medium;
+
+        a {
+          text-decoration: none;
+          color: $color-white;
+
+          &:hover {
+            color: $color-light;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+
+    &__contact {
+      display: flex;
+      align-items: center;
+      width: 48.5%;
+      justify-content: space-between;
+      margin: 5px;
+
+      a {
+        text-decoration: none;
+        color: $color-light;
+        font-size: 0.8em;
+        font-weight: bold;
+
+        img {
+          width: 32px;
+        }
+      }
+    }
+
+    &__copyright {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 51.5%;
+
+      a {
+        img {
+          width: 32px;
         }
       }
     }
