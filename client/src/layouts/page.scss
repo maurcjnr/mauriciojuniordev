@@ -78,11 +78,9 @@ body {
           @include input-small;
           justify-content: space-between;
 
-          a {
-            img {
-              width: 24px;
-              margin: 0 10px 0 0;
-            }
+          img {
+            width: 24px;
+            margin: 0 10px 0 0;
           }
         }
       }
@@ -96,11 +94,9 @@ body {
           @include input-small;
           justify-content: space-between;
 
-          a {
-            img {
-              width: 24px;
-              margin: 0 10px 0 0;
-            }
+          img {
+            width: 24px;
+            margin: 0 10px 0 0;
           }
         }
       }
@@ -243,6 +239,15 @@ body {
       a {
         img {
           width: 32px;
+        }
+      }
+
+      &__flag {
+        margin: 0 0 0 5px;
+        cursor: pointer;
+
+        img {
+          width: 24px !important;
         }
       }
     }

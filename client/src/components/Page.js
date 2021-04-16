@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { rollIn } from "react-animations";
+import RandomNumber from "../components/RandomNumber";
 
 import GitHub from "../images/github.png";
 import LinkedIn from "../images/linkedin.png";
@@ -9,85 +10,97 @@ import Instagram from "../images/instagram.png";
 import Twitter from "../images/twitter.png";
 import d20 from "../images/d20.png";
 import M from "../images/m.png";
-
-const Bounce = styled.div`
-  animation: 2s ${keyframes`${rollIn}`} infinite;
-`;
+import Brazil from "../images/brazil.png";
+import USA from "../images/united-states.png";
 
 export default (props) => {
+  const RollIn = styled.div`
+    animation: 3s ${keyframes`${rollIn}`} infinite;
+  `;
+
+  const [locale, setLocale] = useState(true);
+
+  const clickBR = () => {
+    setLocale(true);
+  };
+
+  const clickUSA = () => {
+    setLocale(false);
+  };
+
   return (
     <div className="page">
       <div className="content">
         <div className="page__top">
           <div className="page__top__left">
             <div className="page__top__left__input">
-              <p>Nome:</p>
+              <p>{locale == true ? "Nome:" : "Name:"}</p>
               <p>Maurício Júnior</p>
             </div>
             <div className="page__top__left__input">
-              <p>Nível:</p>
+              <p>{locale == true ? "Nível:" : "Level:"}</p>
               <p>23</p>
             </div>
           </div>
 
           <div className="page__top__right">
             <div className="page__top__right__input">
-              <p>Classe:</p>
-              <p>Programador</p>
+              <p>{locale == true ? "Classe:" : "Class:"}</p>
+              <p>{locale == true ? "Programador" : "Developer"}</p>
             </div>
             <div className="page__top__right__input">
-              <p>Raça:</p>
-              <p>Humano</p>
+              <p>{locale == true ? "Raça:" : "Race:"}</p>
+              <p>{locale == true ? "Humano" : "Human"}</p>
             </div>
           </div>
         </div>
 
         <div className="page__title">
-          <h2>ATRIBUTOS</h2>
-          <h2>SOBRE</h2>
+          <h2>{locale == true ? "ATRIBUTOS" : "ATTRIBUTES"}</h2>
+          <h2>{locale == true ? "SOBRE" : "ABOUT"}</h2>
         </div>
 
         <div className="page__one">
           <div className="page__one__attributes">
             <div className="page__one__attributes__left">
               <div className="page__one__attributes__left__input">
-                <p>FOR: 10</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "FOR:" : "STR:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
               <div className="page__one__attributes__left__input">
-                <p>DES: 8</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "DES:" : "DEX:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
               <div className="page__one__attributes__left__input">
-                <p>CON: 14</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "CON:" : "CON:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
             </div>
 
             <div className="page__one__attributes__right">
               <div className="page__one__attributes__right__input">
-                <p>INT: 16</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "INT:" : "INT:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
               <div className="page__one__attributes__right__input">
-                <p>SAB: 18</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "SAB:" : "WIS:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
               <div className="page__one__attributes__right__input">
-                <p>CAR: 15</p>
-                <a>
-                  <img src={d20} alt="d20" />
-                </a>
+                <p>
+                  {locale == true ? "CAR:" : "CHA:"} <RandomNumber />
+                </p>
+                <img src={d20} alt="d20" />
               </div>
             </div>
           </div>
@@ -95,16 +108,15 @@ export default (props) => {
           <div className="page__one__about">
             <div className="page__one__about__input">
               <p>
-                Apaixonado por jogos e tecnologia, atualmente estudando React e
-                Node, desenvolvendo um projeto pessoal sobre jogos de tabuleiro
-                e sistemas de RPG, cursando no quinto semestre o curso superior
-                de Tecnologia em Sistemas para Internet no IFSul.
+                {locale == true
+                  ? "Apaixonado por jogos e tecnologia, atualmente estudando React e Node, desenvolvendo um projeto pessoal sobre jogos de tabuleiro e sistemas de RPG, cursando no quinto semestre o curso superior de Tecnologia em Sistemas para Internet no IFSul."
+                  : "Passionate about games and technology, currently studying React and Node, developing a personal project on board games and RPG systems, studying in the fifth semester the higher course of Technology in Internet Systems at IFSul."}
               </p>
             </div>
           </div>
         </div>
 
-        <h2>HABILIDADES</h2>
+        <h2>{locale == true ? "HABILIDADES" : "SKILLS"}</h2>
         <div className="page__skills">
           <div className="page__skills__left">
             <div className="page__skills__left__input">
@@ -140,8 +152,8 @@ export default (props) => {
         </div>
 
         <div className="page__title">
-          <h2>EXPERIÊNCIAS</h2>
-          <h2>PROJETOS</h2>
+          <h2>{locale == true ? "EXPERIÊNCIAS" : "EXPERIENCES"}</h2>
+          <h2>{locale == true ? "PROJETOS" : "PROJECTS"}</h2>
         </div>
 
         <div className="page__two">
@@ -204,7 +216,7 @@ export default (props) => {
 
         <div className="page__bottom">
           <div className="page__bottom__contact">
-            <h2>CONTATO:</h2>
+            <h2>{locale == true ? "CONTATO:" : "CONTACT:"}</h2>
             <a href="https://github.com/maurcjnr" target="_blank">
               <img src={GitHub} alt="GitHub" />
             </a>
@@ -229,11 +241,17 @@ export default (props) => {
           </div>
 
           <div className="page__bottom__copyright">
-            <Bounce>
+            <RollIn>
               <a href="https://mauriciojunior.dev/">
                 <img src={M} alt="M" />
               </a>
-            </Bounce>
+            </RollIn>
+            <a className="page__bottom__copyright__flag" onClick={clickBR}>
+              <img src={Brazil} alt="Brazil" />
+            </a>
+            <a className="page__bottom__copyright__flag" onClick={clickUSA}>
+              <img src={USA} alt="United States" />
+            </a>
           </div>
         </div>
       </div>

@@ -238,7 +238,7 @@ body {
 .page__one__attributes__left__input p {
   padding: 5px 10px;
 }
-.page__one__attributes__left__input a img {
+.page__one__attributes__left__input img {
   width: 24px;
   margin: 0 10px 0 0;
 }
@@ -262,7 +262,7 @@ body {
 .page__one__attributes__right__input p {
   padding: 5px 10px;
 }
-.page__one__attributes__right__input a img {
+.page__one__attributes__right__input img {
   width: 24px;
   margin: 0 10px 0 0;
 }
@@ -435,6 +435,13 @@ body {
 }
 .page__bottom__copyright a img {
   width: 32px;
+}
+.page__bottom__copyright__flag {
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
+.page__bottom__copyright__flag img {
+  width: 24px !important;
 }
 
 /*# sourceMappingURL=index.css.map */
