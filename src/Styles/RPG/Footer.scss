@@ -1,0 +1,46 @@
+//Imported
+@import "../../Variables/Variables.scss";
+
+.footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; //horizontal
+  justify-content: center; //vertical
+  flex-direction: column;
+
+  &__back-button {
+    margin: 5px 0 5px 0;
+
+    a {
+      text-decoration: none;
+      color: $whiteColor;
+      font-size: 0.8em;
+    }
+  }
+
+  &__copyright {
+    margin: 5px 0 5px 0;
+
+    p {
+      color: $whiteColor;
+      font-size: 0.8em;
+      padding: 1px 0 1px 0;
+
+      a {
+        text-decoration: none;
+        color: $redColor1;
+      }
+    }
+  }
+
+  &__flaticon {
+    margin: 5px 0 5px 0;
+
+    a {
+      text-decoration: none;
+      color: $redColor2;
+      font-size: 0.7em;
+    }
+  }
+}
