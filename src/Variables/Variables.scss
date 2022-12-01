@@ -12,9 +12,11 @@ $open-sans: "Open Sans", serif;
 $comfortaa: "Comfortaa", serif;
 
 //Colors
-$whiteColor: #ffffff;
+$whiteColor1: #ffffff;
+$whiteColor2: #eaeaea;
+$whiteColor3: #b2b2b2;
 
-$pinkColor1: #fb9cb2;
+$pinkColor: #fb9cb2;
 
 $blueColor1: #6b728e;
 $blueColor2: #50577a;
@@ -25,3 +27,9 @@ $redColor1: #e23e57;
 $redColor2: #88304e;
 $redColor3: #522546;
 $redColor4: #311d3f;
+
+@mixin center {
+  display: flex;
+  align-items: center; //horizontal
+  justify-content: center; //vertical
+}

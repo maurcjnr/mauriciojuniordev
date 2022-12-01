@@ -1,19 +1,17 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 html,
 body,
 div,
 span,
+applet,
 object,
 iframe,
-figure,
 h1,
 h2,
 h3,
@@ -24,24 +22,42 @@ p,
 blockquote,
 pre,
 a,
+abbr,
+acronym,
+address,
+big,
+cite,
 code,
+del,
+dfn,
 em,
 img,
+ins,
+kbd,
+q,
+s,
+samp,
 small,
 strike,
 strong,
 sub,
 sup,
 tt,
+var,
 b,
 u,
 i,
+center,
+dl,
+dt,
+dd,
 ol,
 ul,
 li,
 fieldset,
 form,
 label,
+legend,
 table,
 caption,
 tbody,
@@ -50,13 +66,25 @@ thead,
 tr,
 th,
 td,
-main,
+article,
+aside,
 canvas,
+details,
 embed,
+figure,
+figcaption,
 footer,
 header,
+hgroup,
+menu,
 nav,
+output,
+ruby,
 section,
+summary,
+time,
+mark,
+audio,
 video {
   margin: 0;
   padding: 0;
@@ -64,18 +92,20 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
 }
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
 footer,
 header,
+hgroup,
+menu,
 nav,
-section,
-main {
+section {
   display: block;
 }
 
@@ -106,7 +136,96 @@ table {
   border-spacing: 0;
 }
 
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(136, 48, 78, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__container {
+  width: 50%;
+  height: 70%;
+  background-color: #311d3f;
+  border-radius: 15px;
+}
+.modal__container__close-button {
+  position: absolute;
+  bottom: 85%;
+  left: 75%;
+  transform: translate(-110%, 150%);
+}
+.modal__container__close-button a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+.modal__container__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.modal__container__content .archibald,
+.modal__container__content .ludovica {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #eaeaea;
+}
+.modal__container__content .archibald__name,
+.modal__container__content .ludovica__name {
+  margin: 10px 20px 10px 20px;
+}
+.modal__container__content .archibald__name h1,
+.modal__container__content .ludovica__name h1 {
+  margin: 10px 0 10px 0;
+  font-weight: 700;
+}
+.modal__container__content .archibald__info,
+.modal__container__content .ludovica__info {
+  margin: 10px 20px 10px 20px;
+  display: flex;
+}
+.modal__container__content .archibald__info__left-side p,
+.modal__container__content .ludovica__info__left-side p {
+  margin: 10px 0 10px 0;
+}
+.modal__container__content .archibald__info__left-side p span,
+.modal__container__content .ludovica__info__left-side p span {
+  font-weight: 700;
+}
+.modal__container__content .archibald__info__right-side,
+.modal__container__content .ludovica__info__right-side {
+  display: flex;
+  margin: 0 0 0 20px;
+}
+.modal__container__content .archibald__info__right-side p,
+.modal__container__content .ludovica__info__right-side p {
+  margin: 10px 20px 10px 20px;
+}
+.modal__container__content .archibald__info__right-side p span,
+.modal__container__content .ludovica__info__right-side p span {
+  font-weight: 700;
+}
+.modal__container__content .archibald__magic-items,
+.modal__container__content .ludovica__magic-items {
+  margin: 10px 20px 10px 20px;
+}
+.modal__container__content .archibald__magic-items h1,
+.modal__container__content .ludovica__magic-items h1 {
+  font-weight: 700;
+}
+.modal__container__content .archibald__magic-items p,
+.modal__container__content .ludovica__magic-items p {
+  margin: 10px 0 10px 0;
+}
+.modal__container__content .archibald__magic-items p span,
+.modal__container__content .ludovica__magic-items p span {
+  font-weight: 700;
 }/*# sourceMappingURL=Modal.css.map */
